@@ -1,0 +1,21 @@
+class Equipo{
+    private list<Usuario> integrantes;
+
+    public Equipo(){}
+
+    public void agregarIntegrante(Usuario integrante){
+        integrantes.add(integrante);
+    }
+
+    public void actualizarIntegrante(Usuario integrante){
+        integrantes.update(integrante);
+    }
+
+    public void eliminarIntegrante(Usuario integrante){
+        integrantes.remove(integrante);
+    }
+
+    public Usuario getIntegrante(string nombre){
+        return integrantes.get(nombre);
+    }
+}

@@ -1,0 +1,55 @@
+class Usuario{
+    private string nombre;
+    private string contraseña;
+    private list<Eventos> listaEventos;
+    private list<ToDo> listaTareas;
+    private Agenda agenda;
+    private Equipo equipo;
+    private string puesto;
+#region getters
+    public string getNombre(){
+        return nombre;
+    }
+    public string getContraseña(){
+        return contraseña;
+    }
+    public list getListaEventos(){
+        return listaEventos;
+    }
+    public list getListaTareas(){
+        return listaTodo;
+    }
+    public Agenda getAgenda(){
+        return agenda;
+    }
+    public Equipo getEquipo(){
+        return equipo;
+    }
+    public string getPuesto(){
+        return puesto;
+    }
+#endregion
+#region setter
+    public void setNombre(string nombre){
+        this.nombre = nombre;
+    }
+    public void setContraseña(string contraseña){
+        this.contraseña = contraseña;
+    }
+    public void añadirEvento(Eventos evento){
+        listaEventos.add(evento);
+    }
+    public void añadirTodo(ToDo tarea){
+        listaTodo.add(tarea);
+    }
+    public void setAgenda(Agenda agenda){
+        this.agenda = agenda;
+    }
+    public void setEquipo(Equipo equipo){
+        this.equipo = equipo;
+    }
+    public void setPuesto(string puesto){
+        this.puesto = puesto;
+    }
+#endregion
+}

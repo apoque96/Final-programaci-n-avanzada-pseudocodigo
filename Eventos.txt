@@ -1,0 +1,31 @@
+abstract class Eventos{
+    //Al crear un nuevo evento se le asigna un id comenzando por 0, por cada
+    //evento agregado se le asigna el valor de classID, despues incrementa
+    //el valor de la variable en 1
+    protected static classID = 0;
+    protected int id;
+    protected Prioridad prioridad;
+    protected date fecha;
+
+    //La hora limite en reuniones se refiere a la hora fin
+    protected time horaLimite;
+
+    public Prioridad getPrioridad(){
+        return prioridad;
+    }
+
+    public date getFecha(){
+        return fecha;
+    }
+
+    public time getHoraLimite(){
+        return horaLimite;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public abstract string descripción() = 0;
+}
+

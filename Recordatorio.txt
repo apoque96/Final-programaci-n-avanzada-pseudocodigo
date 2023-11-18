@@ -1,0 +1,12 @@
+class Recordatorio expands Eventos{
+    public Recordatorio(Prioridad prioridad, date fecha, time horaLimite){
+        this.prioridad = prioridad;
+        this.fecha = fecha;
+        this.horaLimite = horaLimite;
+        this.id = classID++;
+    }
+
+    public string descripción(){
+        //blablabla
+    }
+}

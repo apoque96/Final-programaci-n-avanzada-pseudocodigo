@@ -1,0 +1,16 @@
+class Alarma expands Eventos{
+    public Alarma(Prioridad prioridad, date fecha, time horaLimite){
+        this.prioridad = prioridad;
+        this.fecha = fecha;
+        this.horaLimite = horaLimite;
+        this.id = classID++;
+    }
+
+    public bloquearSistema(){
+        //blablabla
+    }
+
+    public apagarAlarma(){
+        //blablabla
+    }
+}

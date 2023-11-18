@@ -1,0 +1,29 @@
+class Agenda{
+    private list<PaginasAgenda> paginas;
+
+    public Agenda(){}
+
+    public void agregarPagina(PaginasAgenda pagina){
+        paginas.add(pagina);
+    }
+
+    public void actualizarPagina(PaginasAgenda pagina){
+        paginas.update(pagina);
+    }
+
+    public void eliminarPagina(Usuario pagina){
+        paginas.remove(pagina);
+    }
+
+    public Usuario getPagina(string texto){
+        return paginas.get(texto);
+    }
+
+    public void exportarAgenda(){
+        //blabla
+    }
+
+    public void importarAgenda(){
+        //blabla
+    }
+}

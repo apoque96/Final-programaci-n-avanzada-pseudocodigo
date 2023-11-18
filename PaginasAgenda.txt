@@ -1,0 +1,11 @@
+class PaginasAgenda{
+    private string mes;
+    private int año;
+    private string texto;
+
+    public PaginasAgenda(string mes, int año, string texto){
+        this.mes = mes;
+        this.año = año;
+        this.texto = texto;
+    }
+}

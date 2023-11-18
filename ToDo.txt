@@ -1,0 +1,32 @@
+class ToDo{
+    private Prioridad prioridad;
+    private string nombre;
+    private string color;
+    private time planificación;
+    private time ejecucción;
+
+    public ToDo(Prioridad prioridad, string nombre, string color,
+                time planificación, time ejecucción;){
+        this.prioridad = prioridad;
+        this.nombre = nombre;
+        this.color = color;
+        this.planificación = planificación;
+        this.ejecucción = ejecucción;
+    }
+
+    public Prioridad getPrioridad(){
+        return prioridad;
+    }
+    public string getNombre(){
+        return nombre;
+    }
+    public string getColor(){
+        return color;
+    }
+    public time getPlanificación(){
+        return planificación;
+    }
+    public time getEjecucción(){
+        return ejecucción;
+    }
+}

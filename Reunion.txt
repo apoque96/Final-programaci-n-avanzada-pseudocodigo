@@ -1,0 +1,37 @@
+class Reunion expands Eventos{
+    private time horaInicio;
+    private string lugar;
+    private Equipo equipo;
+    private list<string> materiales;
+
+    public Reunion(Prioridad prioridad, date fecha, time horaInicio, 
+                   time horaFinal, string lugar, Equipo equipo){
+        this.prioridad = prioridad;
+        this.fecha = fecha;
+        this.horaInicio = horaInicio;
+        this.horaLimite = horaFinal;
+        this.lugar = lugar;
+        this.equipo = equipo;
+        this.id = classID++;
+    }
+
+    public string descripción(){
+        //blablabla
+    }
+
+    public time getHoraInicio(){
+        return horaInicio;
+    }
+
+    public string getLugar(){
+        return lugar;
+    }
+
+    public Equipo getEquipo(){
+        return equipo;
+    }
+
+    public list<string> getMateriales(){
+        return materiales;
+    }
+}
