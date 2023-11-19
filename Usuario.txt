@@ -6,6 +6,16 @@ class Usuario{
     private Agenda agenda;
     private Equipo equipo;
     private string puesto;
+
+    public Usuario(string nombre, string contraseña, Agenda agenda, 
+                   Equipo equipo, string puesto){
+        this.nombre = nombre;
+        this.contraseña = contraseña;
+        this.agenda = agenda;
+        this.equipo = equipo;
+        this.puesto = puesto;
+    }
+
 #region getters
     public string getNombre(){
         return nombre;
@@ -52,4 +62,46 @@ class Usuario{
         this.puesto = puesto;
     }
 #endregion
+
+    public Eventos getEvento(int id){
+        //Traversa la lista hasta encontrar el evento con el id otorgado
+        foreach(const auto& e in listaEventos){
+            if(e.getId() == id){
+                return e;
+            }
+        }
+        //Si llega hasta aquí, significa que no existe un evento con el id otorgado
+        throw new exception("No se encontro el evento");
+    }
+
+    public Eventos getEvento(date fecha){
+        //Traversa la lista hasta encontrar el evento con la fecha otorgada
+        foreach(const auto& e in listaEventos){
+            if(e.getFecha() == fecha){
+                return e;
+            }
+        }
+        //Si llega hasta aquí, significa que no existe un evento con la fecha otorgada
+        throw new exception("No se encontro el evento");
+    }
+
+    public Eventos getEvento(string texto){
+        //Traversa la lista hasta encontrar un evento que contenga el texto otorgado
+        foreach(const auto& e in listaEventos){
+            if(e.getTexto().find(texto) >= 0){
+                return e;
+            }
+        }
+        //Si llega hasta aquí, significa que no existe un evento con el texto otorgado
+        throw new exception("No se encontro el evento");
+    }
+
+    public void actualizar(string nombre, string contraseña, Agenda agenda, 
+        Equipo equipo, string puesto){
+        this.nombre = nombre;
+        this.contraseña = contraseña;
+        this.agenda = agenda;
+        this.equipo = equipo;
+        this.puesto = puesto;
+    }
 }

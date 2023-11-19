@@ -7,8 +7,9 @@ class Equipo{
         integrantes.add(integrante);
     }
 
-    public void actualizarIntegrante(Usuario integrante){
-        integrantes.update(integrante);
+    public void actualizarIntegrante(Usuario integrante, string nombre, 
+        string contraseña, Agenda agenda, Equipo equipo, string puesto){
+        integrante.actualizar(nombre, contraseña, agenda, equipo, puesto);
     }
 
     public void eliminarIntegrante(Usuario integrante){

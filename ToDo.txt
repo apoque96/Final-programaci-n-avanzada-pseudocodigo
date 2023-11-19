@@ -14,6 +14,15 @@ class ToDo{
         this.ejecucción = ejecucción;
     }
 
+    public void actualizar(Prioridad prioridad, string nombre, string color,
+                time planificación, time ejecucción;){
+        this.prioridad = prioridad;
+        this.nombre = nombre;
+        this.color = color;
+        this.planificación = planificación;
+        this.ejecucción = ejecucción;
+    }
+
     public Prioridad getPrioridad(){
         return prioridad;
     }
