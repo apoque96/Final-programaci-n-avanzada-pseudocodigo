@@ -1,11 +1,51 @@
 class PaginasAgenda{
+    private int día;
     private string mes;
     private int año;
     private string texto;
+    private bool realizado;
 
-    public PaginasAgenda(string mes, int año, string texto){
+    public PaginasAgenda(int día, string mes, int año, string texto){
+        this.día = día;
         this.mes = mes;
         this.año = año;
         this.texto = texto;
+        realizado = false;
+    }
+    
+    public PaginasAgenda(int día, string mes, int año, string texto, bool realizado){
+        this.día = día;
+        this.mes = mes;
+        this.año = año;
+        this.texto = texto;
+        this.realizado = realizado;
+    }
+
+    public int getDía(){
+        return día;
+    }
+
+    public string getMes(){
+        return mes;
+    }
+
+    public int getAño(){
+        return año;
+    }
+
+    public string getTexto(){
+        return texto;
+    }
+
+    public bool getRealizado(){
+        return realizado;
+    }
+
+    public void actualizar(int día, string mes, int año, string texto, bool realizado){
+        this.día = día;
+        this.mes = mes;
+        this.año = año;
+        this.texto = texto;
+        this.realizado = realizado;    
     }
 }

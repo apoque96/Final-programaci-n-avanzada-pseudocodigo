@@ -7,23 +7,39 @@ class Agenda{
         paginas.add(pagina);
     }
 
-    public void actualizarPagina(PaginasAgenda pagina){
-        paginas.update(pagina);
+    public void actualizarPagina(PaginasAgenda pagina, int día, 
+                                 string mes, int año, string texto, 
+                                 bool realizado){
+        pagina.actualizar(día, mes, año, texto, realizado);
     }
 
-    public void eliminarPagina(Usuario pagina){
+    public void eliminarPagina(PaginasAgenda pagina){
         paginas.remove(pagina);
     }
 
-    public Usuario getPagina(string texto){
+    public PaginasAgenda getPagina(string texto){
         return paginas.get(texto);
     }
 
-    public void exportarAgenda(){
-        //blabla
+    public void exportarAgenda(string nombreArchivo){
+        archivo = open(nombreArchivo + ".csv");
+        foreach(const auto& e in paginas){
+            archivo.writeline(e.getDía + ',' + e.getMes + ',' + e.getAño +
+                              ',' + e.getTexto + '.' + e.getRealizado);
+        }
     }
 
-    public void importarAgenda(){
-        //blabla
+    public void importarAgenda(string nombreArchivo){
+        arhivo = open(nombreArchivo);
+        string linea = "";
+        while(getline(archivo, linea)){
+            int día = getline(archivo, linea, ',');
+            string mes = getline(archivo, linea, ',');
+            int año = getline(archivo, linea, ',');
+            string texto = getline(archivo, linea, ',');
+            bool realizado = getline(archivo, linea, ',');
+            this.agregarPagina(new PaginasAgenda(día, mes, año, texto, realizado));
+            linea = "";
+        }
     }
 }
