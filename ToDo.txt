@@ -4,14 +4,16 @@ class ToDo{
     private string color;
     private time planificación;
     private time ejecucción;
+    private Usuario miembro;
 
     public ToDo(Prioridad prioridad, string nombre, string color,
-                time planificación, time ejecucción;){
+                time planificación, time ejecucción, Usuario miembro){
         this.prioridad = prioridad;
         this.nombre = nombre;
         this.color = color;
         this.planificación = planificación;
         this.ejecucción = ejecucción;
+        this.miembro = miembro;
     }
 
     public Prioridad getPrioridad(){
@@ -28,5 +30,8 @@ class ToDo{
     }
     public time getEjecucción(){
         return ejecucción;
+    }
+    public Usuario getMiembro(){
+        return miembro;
     }
 }
