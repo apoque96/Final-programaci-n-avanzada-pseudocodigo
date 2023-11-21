@@ -10,7 +10,7 @@ class Alarma_form expands form{
                              presione el botón de apagarAlarma";
 
     Button btn_apagar = "Apagar alarma"
-
+    //Apaga la alarma
     btn_apagar_click(){
         this.hide();
     }
