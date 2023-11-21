@@ -10,6 +10,8 @@ abstract class Eventos{
     //La hora limite en reuniones se refiere a la hora fin
     protected time horaLimite;
 
+    protected string descripción;
+
     public Prioridad getPrioridad(){
         return prioridad;
     }
@@ -26,6 +28,6 @@ abstract class Eventos{
         return id;
     }
 
-    public abstract string descripción() = 0;
+    public abstract string getDescripción() = 0;
 }
 

@@ -5,7 +5,7 @@ class Reunion expands Eventos{
     private list<string> materiales;
 
     public Reunion(Prioridad prioridad, date fecha, time horaInicio, 
-                   time horaFinal, string lugar, Equipo equipo){
+                   time horaFinal, string lugar, Equipo equipo, string descripción){
         this.prioridad = prioridad;
         this.fecha = fecha;
         this.horaInicio = horaInicio;
@@ -13,10 +13,11 @@ class Reunion expands Eventos{
         this.lugar = lugar;
         this.equipo = equipo;
         this.id = classID++;
+        this.descripción = descripción;
     }
 
     public string descripción(){
-        //blablabla
+        return horaLimite + "- Reunion -" + descripción;
     }
 
     public time getHoraInicio(){
