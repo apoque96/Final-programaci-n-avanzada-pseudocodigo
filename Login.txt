@@ -1,0 +1,16 @@
+class Login expands form{
+    //Labels
+    private label lb_bienvenida = "Bienvenido a ToDo";
+    private label lb_descripción = "Inicie sesión para continuar con su agenda";
+    private label lb_cuenta = "¿No tienes cuenta?";
+
+    //TextBox
+    private TextBox tB_usuario = "usuario";
+    private TextBox tB_contraseña = "contraseña";
+
+    //Botones
+    private Button btn_iniciar = "Iniciar seción";
+    private Button btn_crear = "Crear cuenta";
+
+    public void btn_iniciar_click();
+}

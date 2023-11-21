@@ -1,0 +1,11 @@
+class Eventos_form expands form{
+    //Labels
+    private label lb_eventos = "Eventos";
+    private label lb_equipos = "Equipos actuales";
+
+    //Botones
+    private Button btn_reunión = "Agregar reunión";
+    private Button btn_recordatorio = "Agregar Recordatorio";
+    private Button btn_alarma = "Agregar alarma";
+    private Button btn_buscar = "Buscar evento";
+}
