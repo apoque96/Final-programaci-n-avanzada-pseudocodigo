@@ -1,0 +1,10 @@
+class ImportarExportar_form expands form{
+    private label lb_titulo = "Importar/Exportar agenda";
+
+    private Button btn_exportar = "Exportar";
+    private Button btn_importar = "Importar";
+
+    public void btn_exportar_click(){
+
+    }
+}

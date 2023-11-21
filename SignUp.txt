@@ -1,0 +1,32 @@
+class SignUp expands form{
+    //Labels
+    private label lb_titulo = "Crear cuenta";
+    private label lb_subtitulo = "Ingrese todos los valores para continuar";
+    private label lb_usuario = "Nombre de usuario";
+    private label lb_equipo = "Equipo al que pertenece";
+    private label lb_puesto = "Puesto que ejerce";
+    private label lb_contraseña = "Cree su contraseña";
+    private label lb_confimación = "Congfirme su contraseña";
+    private label lb_terminosYCondiciones = "I agree with Terms And Privacy Policy";
+
+    //TextBox
+    private TextBox tB_usuario;
+    private TextBox tB_equipo;
+    private TextBox tB_puesto;
+    private TextBox tB_contraseña;
+    private TextBox tB_confirmación;
+
+    //Botones
+    private Button btn_crear = "Crear cuenta";
+
+    //CheckBox
+    private CheckBox cB_terminos;
+
+    public void btn_crear_click(){
+        if(!cB_terminos.checked()){
+            MessageBox.show("No se han aceptado los terminos y condiciones");
+            return;
+        }
+        
+    }
+}

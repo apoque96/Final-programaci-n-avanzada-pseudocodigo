@@ -1,0 +1,17 @@
+class Alarma_form expands form{
+    private string descripción;
+    
+    public Alarma_form(string descripción){
+        this.descripción = descripción;
+    }
+    
+    private label lb_descripción = descripción;
+    private label lb_nota = "Nota: Esta alarma no desaparecerá hasta que se
+                             presione el botón de apagarAlarma";
+
+    Button btn_apagar = "Apagar alarma"
+
+    btn_apagar_click(){
+        this.hide();
+    }
+}

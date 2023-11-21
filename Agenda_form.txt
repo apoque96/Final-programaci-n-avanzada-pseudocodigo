@@ -1,0 +1,37 @@
+class Agenda_form expands form{
+    //Agenda de la persona
+    private Agenda agenda;
+    //Labels
+    private label lb_titulo = "Agenda";
+    private label lb_mes = "Mes";
+    private label lb_año = "Año";
+    //ComboBox
+    private ComboBox cB_mes;
+    cb_mes.add(
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre"
+    );
+    private ComboBox cB_año;
+    cB_año.add(
+        2023,
+        2024,
+        2025,
+        2026,
+        2027
+    );
+
+    //Botones
+    private Button btn_agregarPagina = "Agregar página";
+    private Button btn_actualizarPagina = "Actualizar página";
+    private Button btn_eliminarPagina = "Eliminar página";
+}

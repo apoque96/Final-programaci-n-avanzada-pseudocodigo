@@ -1,0 +1,11 @@
+class Administrador_form expands form{
+    //Labels
+    private label lb_titulo = "Administrador";
+    private label lb_administradorEquipo = "Administrador equipo";
+    private label lb_agregar = "Agregar al equipo";
+    private label lb_adminitradorTareas = "Administrar tareas de usuarios";
+
+    private Button btn_agregarAdministradorEquipo = "Agregar";
+    private Button btn_agregarTarea = "Agregar tarea";
+    private Button btn_agregarEvento = "Agregar evento";
+}

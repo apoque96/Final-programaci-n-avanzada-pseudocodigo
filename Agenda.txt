@@ -25,7 +25,7 @@ class Agenda{
         archivo = open(nombreArchivo + ".csv");
         foreach(const auto& e in paginas){
             archivo.writeline(e.getDía + ',' + e.getMes + ',' + e.getAño +
-                              ',' + e.getTexto + '.' + e.getRealizado);
+                              ',' + e.getTexto + ',' + e.getRealizado);
         }
     }
 

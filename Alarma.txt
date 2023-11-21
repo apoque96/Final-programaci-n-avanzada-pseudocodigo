@@ -5,12 +5,14 @@ class Alarma expands Eventos{
         this.horaLimite = horaLimite;
         this.id = classID++;
     }
+    //Este metodo se llamaría cada minuto para comprobar la hora
+    public void bloquearSistema(){
+        if(horaLimite == time.now()){
 
-    public bloquearSistema(){
-        //blablabla
+        }
     }
 
-    public apagarAlarma(){
+    public void apagarAlarma(){
         //blablabla
     }
 }
