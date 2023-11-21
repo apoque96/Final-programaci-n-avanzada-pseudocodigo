@@ -8,11 +8,7 @@ class Alarma expands Eventos{
     //Este metodo se llamaría cada minuto para comprobar la hora
     public void bloquearSistema(){
         if(horaLimite == time.now()){
-
+            main::alarmaForm.show();
         }
-    }
-
-    public void apagarAlarma(){
-        //blablabla
     }
 }
