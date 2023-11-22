@@ -1,0 +1,56 @@
+class ToDo_form expands form{
+    private label lb_titulo = "Agregar ToDo";
+    private label lb_subtitulo = "Menu para agregar tareas por hacer";
+    private label lb_tarea = "Nombre de la tarea";
+    private label lb_descripción = "Descripción";
+    private label lb_prioridad = "Prioridad";
+    private label lb_color = "Color";
+    private label lb_horaPlanificación = "Hora de planificación";
+    private label lb_horaEjecución = "Hora de ejecución";
+    private label lb_usuario = "Usuario asignado";
+
+
+    private tB_tarea;
+    private tB_descripción;
+
+    private ComboBox cB_prioridad
+    cB_prioridad.add(
+        baja,
+        media,
+        alta
+    );
+
+    private ComboBox cB_miembroAsignado;
+
+    private ColorPicker colorPick;
+
+    private TimePicker horaPlanificación;
+    private TimePicker horaEjecución;
+
+    private Button btn_cancelar;
+    private Butoon btn_agregar;
+
+    public ToDo_form(){
+        Equipo equipo = main::integrante.getEquipo();
+        foreach(Usuario e in equipo){
+            cB_miembroAsignado.add(e.getNombre());
+        }
+    }
+
+    public void btn_cancelar_click(){
+        this.Hide();
+    }
+
+    public void btn_agregar(){
+        Equipo equipo = main::integrante.getEquipo();
+        Usuario miembroAsignado = equipo.getIntegrante(cB_miembroAsignado.text);
+        if(!miembroAsignado){
+            MessageBox.show("Usuario no encontrado");
+            return;
+        }
+        miembroAsignado.añadirTodo(
+            new ToDo(cB_prioridad.text, tB_tarea.text, colorPick.value, 
+                     horaPlanificación.value, horaEjecución.value, miembroAsignado)
+        );
+    }
+}

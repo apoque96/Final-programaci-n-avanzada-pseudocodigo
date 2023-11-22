@@ -4,7 +4,14 @@ class ImportarExportar_form expands form{
     private Button btn_exportar = "Exportar";
     private Button btn_importar = "Importar";
 
-    public void btn_exportar_click(){
+    private TextBox tB_exportar;
+    private TextBox tB_importar;
 
+    public void btn_exportar_click(){
+        main::integrante.getAgenda.exportarAgenda(tB_exportar.text);
+    }
+
+    public void btn_importar_click(){
+        main::integrante.getAgenda.importarAgenda(tB_importar.text);
     }
 }

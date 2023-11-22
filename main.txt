@@ -8,6 +8,7 @@ ImportarExportar_form importarExportarForm;
 Login login;
 SignUp signUp;
 ToDo_form ToDoForm;
+Usuario integrante;
 
 main(){
     login.show();
@@ -15,7 +16,7 @@ main(){
 
 void Login::btn_iniciar_click(){
     foreach(Equipo equipo in listaEquipos){
-        auto integrante = equipo.getIntegrante(tB_usuario);
+        integrante = equipo.getIntegrante(tB_usuario);
         if(!integrante) continue;
         if(integrante.getContraseña() != tB_contraseña){
             MessageBox.show("Contraseña incorrecta");
