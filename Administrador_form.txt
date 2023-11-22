@@ -5,7 +5,32 @@ class Administrador_form expands form{
     private label lb_agregar = "Agregar al equipo";
     private label lb_adminitradorTareas = "Administrar tareas de usuarios";
 
-    private Button btn_agregarAdministradorEquipo = "Agregar";
+    private Button btn_agregarUsuario = "Agregar";
     private Button btn_agregarTarea = "Agregar tarea";
     private Button btn_agregarEvento = "Agregar evento";
+
+    private TextBox tB_nombre;
+    private ComboBox cB_puesto;
+
+    public void btn_agregarTarea(){
+        this.hide();
+        main::ToDo_form.show();
+    }
+
+    public void btn_agregarEvento(){
+        this.Hide();
+        main::Eventos_form.show();
+    }
+
+    public void btn_agregarUsuario(){
+        foreach(Equipo e in main::listaEquipos){
+            foreach(Usuario u in e){
+                if(u.getNombre() == tB_nombre.text && u.getPuesto() == cB_puesto){
+                    u.setEquipo() = main::integrante.getEquipo();
+                    MessageBox.show("El usuario ha sido agregado correctamente");
+                }
+            }
+        }
+        throw new exception ("No se encontor el usuario seleccionado")
+    }
 }

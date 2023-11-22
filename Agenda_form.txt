@@ -34,4 +34,26 @@ class Agenda_form expands form{
     private Button btn_agregarPagina = "Agregar página";
     private Button btn_actualizarPagina = "Actualizar página";
     private Button btn_eliminarPagina = "Eliminar página";
+
+    private tB_día;
+    private tB_texto;
+
+    CheckBox realizado;
+
+    public void btn_agregarPagina(){
+        agenda.agregarPagina(
+            new PaginasAgenda(tB_día.text, cB_mes.text, cB_año.text, tB_texto.text)
+        );
+    }
+
+    public void btn_actualizarPagina(){
+        agenda.actualizarPagina(
+            agenda.getPagina(tB_texto.text),
+            tB_día.text, cB_mes.text, cB_año.text, tB_texto.text, realizado.value
+        );
+    }
+
+    public void btn_eliminarPagina(){
+        agenda.eliminarPagina(agenda.getPagina(tB_texto.text));
+    }
 }

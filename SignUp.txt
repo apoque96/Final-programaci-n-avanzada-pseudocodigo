@@ -27,6 +27,9 @@ class SignUp expands form{
             MessageBox.show("No se han aceptado los terminos y condiciones");
             return;
         }
-        
+        main::listaEquipos.get(tB_equipo.text).agregarIntegrante(
+            new Usuario(tB_usuario.text, tB_contraseña.text, new Agenda(),
+            tB_equipo.text, tB_puesto.text)
+        );
     }
 }
