@@ -74,26 +74,30 @@ class Usuario{
         throw new exception("No se encontro el evento");
     }
 
-    public Eventos getEvento(date fecha){
+    public list<Eventos> getEvento(date fecha){
+        list<Eventos> resultado;
         //Traversa la lista hasta encontrar el evento con la fecha otorgada
         foreach(const auto& e in listaEventos){
             if(e.getFecha() == fecha){
-                return e;
+                resultado.push(e);
             }
         }
-        //Si llega hasta aquí, significa que no existe un evento con la fecha otorgada
-        throw new exception("No se encontro el evento");
+        //Si la lista está vacía, significa que no hay ningun evento con la fecha dada
+        if(resultado.size() == 0) throw new exception("No se encontro el evento");
+        return resultado;
     }
 
-    public Eventos getEvento(string texto){
+    public list<Eventos> getEvento(string texto){}
+        list<Eventos> resultado;
         //Traversa la lista hasta encontrar un evento que contenga el texto otorgado
         foreach(const auto& e in listaEventos){
             if(e.getTexto().find(texto) >= 0){
-                return e;
+                resultado.push(e);
             }
         }
-        //Si llega hasta aquí, significa que no existe un evento con el texto otorgado
-        throw new exception("No se encontro el evento");
+        //Si la lista está vacía, significa que no hay ningun evento con el texto dado
+        if(resultado.size() == 0) throw new exception("No se encontro el evento");
+        return resultado;
     }
 
     public void actualizar(string nombre, string contraseña, Agenda agenda, 
