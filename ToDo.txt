@@ -5,24 +5,28 @@ class ToDo{
     private time planificación;
     private time ejecucción;
     private Usuario miembro;
+    private date fecha;
 
     public ToDo(Prioridad prioridad, string nombre, string color,
-                time planificación, time ejecucción, Usuario miembro){
+                time planificación, time ejecucción, Usuario miembro,
+                date fecha){
         this.prioridad = prioridad;
         this.nombre = nombre;
         this.color = color;
         this.planificación = planificación;
         this.ejecucción = ejecucción;
         this.miembro = miembro;
+        this.fecha = fecha;
     }
 
     public void actualizar(Prioridad prioridad, string nombre, string color,
-                time planificación, time ejecucción;){
+                time planificación, time ejecucción, date fecha){
         this.prioridad = prioridad;
         this.nombre = nombre;
         this.color = color;
         this.planificación = planificación;
         this.ejecucción = ejecucción;
+        this.fecha = fecha;
     }
 
     public Prioridad getPrioridad(){
@@ -42,5 +46,8 @@ class ToDo{
     }
     public Usuario getMiembro(){
         return miembro;
+    }
+    public date getFecha(){
+        return fecha
     }
 }

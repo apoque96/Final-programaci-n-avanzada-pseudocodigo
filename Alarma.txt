@@ -1,12 +1,5 @@
-class Alarma expands Eventos{
-    public Alarma(Prioridad prioridad, date fecha, time horaLimite,
-                  string descripción){
-        this.prioridad = prioridad;
-        this.fecha = fecha;
-        this.horaLimite = horaLimite;
-        this.id = classID++;
-        this.descripción = descripción;
-    }
+class Alarma expands Recordatorio{
+    using Recordatorio();
 
     public string getDescripción(){
         return horaLimite + "- Alarma -" + descripción;

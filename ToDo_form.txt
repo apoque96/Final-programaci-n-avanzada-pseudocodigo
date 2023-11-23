@@ -27,6 +27,8 @@ class ToDo_form expands form{
     private TimePicker horaPlanificación;
     private TimePicker horaEjecución;
 
+    private DatePicker fecha;
+
     private Button btn_cancelar;
     private Butoon btn_agregar;
 
@@ -50,7 +52,8 @@ class ToDo_form expands form{
         }
         miembroAsignado.añadirTodo(
             new ToDo(cB_prioridad.text, tB_tarea.text, colorPick.value, 
-                     horaPlanificación.value, horaEjecución.value, miembroAsignado)
+                     horaPlanificación.value, horaEjecución.value, miembroAsignadom
+                     fecha.value)
         );
     }
 }
